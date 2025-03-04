@@ -1,0 +1,510 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>আমি ফ্রিতে 🎰 Spin করে MB পেয়েছি! 🎉 তুমিও চেষ্টা করতে পার! 🔥 ১০০% রিয়েল সাইট, সবাইকে মাহে রমজান উপলক্ষে ফ্রী তে এমবি দেওয়া হচ্ছে ✅ </title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1414/1414309.png">
+
+    <script>
+        // Disable right click
+        document.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
+        });
+
+        // Disable Ctrl+U
+        document.addEventListener("keydown", function (event) {
+            if (event.ctrlKey && event.key === 'u') {
+                event.preventDefault();
+            }
+        });
+ 
+        // Disable F12 (Developer Tools)
+        document.addEventListener("keydown", function (event) {
+            if (event.key === 'F12') {
+                event.preventDefault();
+            }
+        });
+    </script>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #404673;
+            flex-direction: column;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .wheel-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Banner styles */
+        .banner {
+            width: 100%;
+            height: 90px;
+            margin: 10px 0;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner1 {
+            width: 100%;
+            height: 300px;
+            margin: 10px 0;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Add an example banner image */
+        .banner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .wheel {
+            width: 90vw;
+            height: 90vw;
+            max-width: 300px;
+            max-height: 300px;
+            border-radius: 50%;
+            border: 10px solid red;
+            overflow: hidden;
+            position: relative;
+            transition: transform 4s ease-out;
+            background-color: black;
+        }
+
+        .spin-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background: gold;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 200px;
+        }
+
+        .comment-container {
+            margin-top: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .comment {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        #comments {
+            max-height: 300px; /* Set height for comment section */
+            overflow-y: auto;  /* Enable scrolling */
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .user-info {
+            display: flex;
+            margin-right: 10px;
+        }
+
+        .user-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .user-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 10px;
+        }
+
+        .user-name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .comment-time {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .user-comment {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .winning-message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: d62f03;
+            text-align: center;
+            display: none;
+        }
+        #shareMessage {
+    color: #fcba03;
+        }
+
+
+        .share-message {
+            text-color:#fcba03;
+            font-size: 16px;
+            color: d62f03;
+            text-align: center;
+            margin-top: 10px;
+            
+        }
+        #winningMessage {
+    color: #00fffb;
+    font-weight: bold;
+        }
+
+
+        .share-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #0078FF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* Phone Input Section styles */
+        .phone-input {
+            margin-top: 20px;
+            display: none;
+            text-align: center;
+        }
+
+        .phone-input input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 250px;
+        }
+
+        .phone-input button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .share-btn-whatsapp {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: green; /* Green color for WhatsApp button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+            margin-bottom: 25px;
+        }
+
+        /* Popup Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .modal button {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <p style="color: red; font-size: 20px; margin-top: 15px; text-align: center;"> <b>রমজান মাস উপলক্ষে সবাইকে ফ্রী তে এমবি দেওয়া হচ্ছে!</b></p>
+
+    <div class="wheel-container">
+        <div class="banner1">
+            <!-- Insert banner ad code below -->
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'd2e895d1c9e240dff1b793c1267f0618',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//framessemicolonought.com/d2e895d1c9e240dff1b793c1267f0618/invoke.js"></script>
+        </div>
+
+        <p style="color: white; font-size: 18px; margin-top: 10px; text-align: center;"> <b>ফ্রি তে এমবি নিতে চাইলে স্পিন করুন একদম ফ্রী তে!</b></p>
+
+        <canvas class="wheel" id="wheel"></canvas>
+        <button class="spin-btn" onclick="spinWheel()"><b>Spin</b></button>
+        <div class="winning-message" id="winningMessage"></div>
+        <div class="share-message" id="shareMessage"></div>
+        <button class="share-btn" id="shareButton" onclick="shareOnMessenger()">Share on Messenger</button>
+        <button class="share-btn-whatsapp" id="shareButtonWhatsApp" onclick="shareOnWhatsApp()">Share on WhatsApp</button>
+
+        <!-- Phone Input Section (Hidden initially) -->
+        <div class="phone-input" id="phoneInput">
+            <input id="phoneNumber" placeholder="Enter Phone Number" type="text" />
+            <button onclick="submitPhoneNumber()">Submit</button>
+            <p style="color: white; font-size: 14px; margin-top: 10px;">রমজান মাস উপলক্ষে সবাইকে ফ্রী তে এমবি দেওয়া হচ্ছে!</p>
+        </div>
+
+        <!-- Comment Section -->
+        <div class="comment-container" id="commentSection">
+            <div class="comment">
+                <div class="user-info">
+                    <img alt="User" class="user-img" src="https://i.imgur.com/xFr7QLT.png" />
+                    <div class="user-details">
+                        <span class="user-name">রহুল আমিন</span>
+                        <span class="comment-time">২ মিনিট আগে</span>
+                    </div>
+                </div>
+                <p class="user-comment">আমি মাত্র ৫০০এমবি পাইছি 🥺</p>
+            </div>
+            <div class="comment">
+                <div class="user-info">
+                    <img alt="User" class="user-img" src="https://i.imgur.com/C6T5JrZ.jpeg" />
+                    <div class="user-details">
+                        <span class="user-name">নাহিদুজ্জামান</span>
+                        <span class="comment-time">৩ মিনিট আগে</span>
+                    </div>
+                </div>
+                <p class="user-comment">আমি দুইটা সিমে পাইছি 🥳</p>
+            </div>
+            <div class="comment">
+                <div class="user-info">
+                    <img alt="User" class="user-img" src="https://cdn.prod.website-files.com/62d84e447b4f9e7263d31e94/6399a4d27711a5ad2c9bf5cd_ben-sweet-2LowviVHZ-E-unsplash-1.jpeg" />
+                    <div class="user-details">
+                        <span class="user-name">Tanvir</span>
+                        <span class="comment-time">৪ মিনিট আগে</span>
+                    </div>
+                </div>
+                <p class="user-comment"> 4 জিবি ভাবতেই পারি নি!</p>
+            </div>
+            <div class="comment">
+                <div class="user-info">
+                    <img alt="User" class="user-img" src="https://randomuser.me/api/portraits/men/7.jpg" />
+                    <div class="user-details">
+                        <span class="user-name">ফাহিম আহমেদ</span>
+                        <span class="comment-time">৫ মিনিট আগে</span>
+                    </div>
+                </div>
+                <p class="user-comment">ভালোবাসা রইলো ভাই 😊</p>
+            </div>
+            <div class="comment">
+                <div class="user-info">
+                    <img alt="User" class="user-img" src="https://randomuser.me/api/portraits/men/8.jpg" />
+                    <div class="user-details">
+                        <span class="user-name">রাশেদুল ইসলাম</span>
+                        <span class="comment-time">৬ মিনিট আগে</span>
+                    </div>
+                </div>
+                <p class="user-comment">এইমাত্র পাইলাম ৩ জিবি</p>
+            </div>
+            <div class="comment">
+                <div class="user-info">
+                    <img alt="User" class="user-img" src="https://randomuser.me/api/portraits/men/9.jpg" />
+                    <div class="user-details">
+                        <span class="user-name">নুরুল আলম</span>
+                        <span class="comment-time">৭ মিনিট আগে</span>
+                    </div>
+                </div>
+                <p class="user-comment">প্রথমে বিশ্বাস করিনি</p>
+            </div>
+            <div class="comment">
+                <div class="user-info">
+                    <img alt="User" class="user-img" src="https://randomuser.me/api/portraits/men/10.jpg" />
+                    <div class="user-details">
+                        <span class="user-name">আব্দুল হালিম</span>
+                        <span class="comment-time">৮ মিনিট আগে</span>
+                    </div>
+                </div>
+                <p class="user-comment">আমি 3 জিবি দিয়েছে</p>
+            </div>
+        </div>
+
+        <div class="banner">
+            <!-- Insert banner ad code below -->
+            <a href="https://framessemicolonought.com/eq3yqkrh?key=c3a27b2685bf1f9a27c027574508fc82" target="_blank">
+                <img src="https://i.imgur.com/YZ5X6y5.png" alt="Ad Image" width="728" height="50">
+            </a>
+        </div>
+
+        <!-- Modal Popup -->
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+                <p>আমাদের ম্যানেজার যাচাই করে দেখবে আপনি সঠিক ভাবে আপনার বন্ধুদের সাথে শেয়ার করেছেন কিনা, যদি করে থাকেন, ২৪ ঘন্টার মধ্যে এসএমএস সহ এমবি পাবেন!</p>
+                <button onclick="redirectToLink()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById("wheel");
+        const ctx = canvas.getContext("2d");
+        const colors = ["#607340", "#FFD700", "#0000FF", "#008000", "#FFFFFF", "#FFC0CB", "#FFA500", "#800080", "#00FFFF"];
+        const values = ["500MB", "1GB", "2GB", "3GB", "4GB", "500MB", "1GB", "2GB", "3GB"];
+        const sections = values.length;
+        canvas.width = 300;
+        canvas.height = 300;
+
+        let currentRotation = 0;
+        let offsetCorrection = (360 / sections) * 1.5;
+
+        function drawWheel() {
+            const sliceAngle = (2 * Math.PI) / sections;
+            for (let i = 0; i < sections; i++) {
+                ctx.beginPath();
+                ctx.moveTo(150, 150);
+                ctx.arc(150, 150, 150, i * sliceAngle, (i + 1) * sliceAngle);
+                ctx.fillStyle = colors[i % colors.length];
+                ctx.fill();
+                ctx.stroke();
+                ctx.save();
+
+                ctx.translate(150, 150);
+                ctx.rotate(i * sliceAngle + sliceAngle / 2);
+                ctx.textAlign = "right";
+                ctx.fillStyle = "black";
+                ctx.font = "bold 14px Arial";
+                ctx.fillText(values[i], 120, 10);
+                ctx.restore();
+            }
+
+            ctx.beginPath();
+            ctx.arc(150, 150, 30, 0, 2 * Math.PI);
+            ctx.fillStyle = "#333";
+            ctx.fill();
+            ctx.stroke();
+        }
+
+        drawWheel();
+
+        function spinWheel() {
+            let randDegree = Math.floor(2000 + Math.random() * 2000);
+            currentRotation += randDegree;
+            canvas.style.transform = `rotate(${currentRotation + offsetCorrection}deg)`;
+
+            setTimeout(() => {
+                let finalAngle = (360 - ((currentRotation + offsetCorrection) % 360)) % 360;
+                let sliceAngle = 360 / sections;
+                let winningIndex = Math.floor(finalAngle / sliceAngle);
+                let winAmount = values[winningIndex];
+
+                const winningMessage = document.getElementById("winningMessage");
+
+                if (winAmount === "0$") {
+                    winningMessage.innerHTML = "Try again!";
+                } else {
+                    winningMessage.innerHTML = `আপনি পেয়েছেন: ${winAmount}`;
+                }
+                winningMessage.style.display = "block";
+
+                const shareMessage = document.getElementById("shareMessage");
+                shareMessage.innerHTML = "আপনি যদি এমবি টা পেতে চান তাহলে আপনার ১০ জন বন্ধুর সাথে শেয়ার করতে হবে,<br> নিচে ক্লিক করে শেয়ার করে আপনার নাম্বার টা সঠিক ভাবে লিখুন"; 
+
+                setTimeout(() => {
+                    const shareButton = document.getElementById("shareButton");
+                    shareButton.style.display = "block";
+                    const shareButtonWhatsApp = document.getElementById("shareButtonWhatsApp");
+                    shareButtonWhatsApp.style.display = "block";
+                }, 1000);
+
+            }, 4000);
+        }
+
+     function shareOnMessenger() {
+    let message = encodeURIComponent("এই ল্যান্ডিং পেইজের মালিক B2L TECH এটি কেউ বিক্রি করবেন না।");
+    let messengerURL = `fb-messenger://share?link=http://getmb.free.nf/&app_id=1056320642924322`;
+
+    window.location.href = messengerURL;
+
+    setTimeout(() => {
+        document.getElementById("phoneInput").style.display = "block";
+    }, 10000);
+}
+
+        function shareOnWhatsApp() {
+            let message = encodeURIComponent("এই ল্যান্ডিং পেইজের মালিক B2L TECH এটি কেউ বিক্রি করবেন না।"); // Insert the link of the website in place of #
+            let whatsappURL = `whatsapp://send?text=আমি ফ্রিতে 🎰 Spin করে MB পেয়েছি! 🎉 তুমিও চেষ্টা করতে পার! 🔥 ১০০% রিয়েল সাইট, সবাইকে মাহে রমজান উপলক্ষে ফ্রী তে এমবি দেওয়া হচ্ছে ✅
+            
+            http://getmb.free.nf/`;
+
+            window.location.href = whatsappURL;
+
+            setTimeout(() => {
+                document.getElementById("phoneInput").style.display = "block";
+            }, 10000);
+        }
+
+        function submitPhoneNumber() {
+            const phoneNumber = document.getElementById("phoneNumber").value;
+            if (phoneNumber) {
+                // Show modal popup
+                document.getElementById("myModal").style.display = "flex";
+            } else {
+                alert("Please enter a valid Phone Number.");
+            }
+        }
+
+        // Function to redirect after clicking OK
+        function redirectToLink() {
+            window.location.href = "https://framessemicolonought.com/qpbf5rmm?key=1da2d5bcfdd5170d16ec31d8c7cfba54"; // Insert direct link in place of #
+        }
+
+        // Close modal when clicked outside of it
+        window.onclick = function (event) {
+            if (event.target == document.getElementById("myModal")) {
+                document.getElementById("myModal").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
